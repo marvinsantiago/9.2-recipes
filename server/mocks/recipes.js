@@ -4,7 +4,22 @@ module.exports = function(app) {
 
   recipesRouter.get('/', function(req, res) {
     res.send({
-      'recipes': []
+      'recipes': [
+        {
+          id: 1,
+          name: 'shrimp and noodles',
+          servings: 8,
+          ingredients: [{
+            amount: '2 pound',
+            name: 'frozen shrimp',
+          },
+          {
+            amount: '2 tbsp',
+            name: 'grated fresh gingerroot'
+          },
+          ]
+        }
+      ]
     });
   });
 
